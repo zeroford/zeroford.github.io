@@ -33,7 +33,7 @@ function startOver() {
       setTimeout(function(){
         var b = document.querySelectorAll('.block') 
         for(var i=0;i<b.length;i++){
-          var rb = b[i] //Math.floor(Math.random()*b.length)
+          var rb = b[Math.floor(Math.random()*b.length)] //Math.floor(Math.random()*b.length)
           var c = b[i].style.background
           var cc = rb.style.background
           b[i].style.background = cc

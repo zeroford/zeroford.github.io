@@ -2,7 +2,7 @@
   --count:'3';
   --gone: block;
   --gameWidth: 0.2;
-  --baseWidth: calc(90vh - 240px);
+  --baseWidth: calc(90vh - 270px);
 }
 html, body {
   margin: 0;
@@ -18,104 +18,101 @@ body {
   height: 100vh;
   top: 0;
   bottom: 0;
-  z-index: 10;
 }
-#main #level-block {
+#level-block {
   font-size: 32px;
   display: block;
   height: 80px;
   padding: 7vh 0 3vh 0;
 }
-#main #level-block #dim {
+#level-block #dim {
   color:#fff;
   background: rgba(0, 0, 0, 0.5);
   font-size: 14px;
   padding: 3px 15px;
   border-radius: 30px;
 }
-#main #game-block {
+#game-block {
   display: flex;
   width: var(--baseWidth);
   height: var(--baseWidth);
   max-width: 90vw;
   max-height: 90vw;
   margin: auto;
-  z-index: 10;
 }
-#main #game-block #game {
+#game-block #game {
   justify-content: center;
   width: calc(var(--baseWidth) * var(--gameWidth));
   height: calc(var(--baseWidth) * var(--gameWidth));
   max-width: calc(100vw * var(--gameWidth));
   max-height: calc(100vw * var(--gameWidth));
   margin: auto;
-  z-index: 10;
 }
-#main #result {
-  margin-top: 20px;
-  height: 120px;
+#result {
+  margin-top: 15px;
+  margin-bottom: 5px;
 }
-#main #result #stat-box {
+#stat-box {
   margin: 0 5vw;
   display: flex;
+  background: rgba(0, 0, 0, 0.6);
+  border-radius: 5px;
 }
-#main #result #stat-box #stat {
-  font-size: 20px;
+#stat-box #stat {
+  font-size: 16px;
   text-transform: uppercase;
   color:#fff;
   font-family: 'Montserrat', sans-serif;
-  background: rgba(0, 0, 0, 0.5);
   padding: 10px;
-  width: calc(45vw - 7.5px);
-  border-radius: 5px;
-  z-index: 10;
+  width: 45vw;
 }
-#main #result #stat-box #stat:nth-child(1) {
+#time, #clicks {  
+  font-size: 28px;
+}
+#stat-box #stat:nth-child(1) {
   margin-right: 15px;
 }
-#main #result #stat-box #stat t {
+#stat-box #stat t {
   font-weight: 900;
 }
 #dimension {
   color:#fff;
-  background: rgba(0, 0, 0, 0.5);
+  background: rgba(0, 0, 0, 0.6);
   font-size: 14px;
   padding: 3px 15px;
   border-radius: 30px;
 }
 .block {
   float: left;
-  width: calc((100% / (var(--gameWidth) * 10)) - 0.8vw);
-  height: calc((100% / (var(--gameWidth) * 10)) - 0.8vw);
+  width: calc((100% / (var(--gameWidth) * 10)) - (min(var(--baseWidth), 90vw) * 0.01));
+  height: calc((100% / (var(--gameWidth) * 10)) - (min(var(--baseWidth), 90vw) * 0.01));
   position: relative;
-  z-index: 10;
-  margin: 0.4vw;
+  margin: calc(min(var(--baseWidth), 90vw) * 0.005);
   border-radius: 16%;
 }
-.block:nth-child(1):before {
+#counter:before {
   content: var(--count);
   display: var(--gone);
   font-family: 'Montserrat', sans-serif;
-  font-size: 5vmin;
-  line-height: 10vmin;
-  width: calc((100% / (var(--gameWidth) * 10)) - 5px);
-  height: calc((100% / (var(--gameWidth) * 10)) - 5px);
+  padding-top: 12px;
+  width: 60px;
+  height: 48px;
+  font-size: 30px;
   text-align: center;
-  font-weight: 900;
   position: absolute;
-  left: 0;
-  top: 0;
-  transform-origin:center center;
+  transform-origin: center center;
   border-radius: 50%;
-  animation: count 3s ease-out forwards;
+  animation: count 3s linear forwards;
   user-select: none;
+  color: #000;
+  background: #fff;
 }
 @keyframes count {
-  0% { content:'3'; }
-  40% { content:'2'; }
-  70% { content:'1'; }
-  99% { content:'1'; visibility:hidden; }
-  100% { content:'0'; visibility:hidden; }
+  0% { content: '3'; }
+  60% { content: '2'; }
+  80% { content: '1'; }
+  99% { content: '1'; visibility:hidden; }
+  100% { content: '0'; visibility:hidden; }
 }
 
 .clicked {
@@ -154,35 +151,45 @@ body {
 }
 #records {
   margin: 10px auto;
-  width: fit-contenta;
+  width: fit-content;
+  color:#fff;
+}
+#records .lvl {
+  padding: 3px 15px;
+  margin: 0 auto;
+  border-radius: 20px;
+  background: rgba(0, 0, 0, 0.35);
+  font-size: 12px;
+  width: fit-content;
+  text-align: center;
 }
 #records #stat-box {
-  padding: 5px;
-  margin: 3px 0 0 0;
-  border-radius: 5px;
+  padding: 0px;
+  margin: 5px 0 0 0 !important;
+  border-radius: 6px;
   font-size: 10px !important;
-  text-align: left;
-  width: 20vw;
+  background: rgba(0, 0, 0, 0.35) !important;
+  width: calc(22vw - 10px);
+  min-width: 160px;
 }
-#records #lvl {
-  padding: 5px;
-  margin: 3px 0 0 0;
-  border-radius: 5px;
-  font-size: 10px !important;
-  text-align: left;
+#records #stat-box #stat {
+  padding: 6px !important;
+  font-size: 12px !important;
+  width: calc(50% - 5px);
+}
+#records #stat-box #stat:nth-child(1) {
+  margin-right: 10px !important;
 }
 #records #time, #records #clicks {  
-  font-size: 10px !important;
+  font-size: 18px !important;
 }
 .rec {
   position: relative;
   display: none;
 }
-.rec .lvl {
-
-}
 .recOn {
   display: inline-block;
+  margin: 5px;
 }
 #background {
   position: fixed;
@@ -191,5 +198,5 @@ body {
   height: auto;
   bottom: 0;
   left: 0;
-  z-index: 1;
+  z-index: -1;
 }
