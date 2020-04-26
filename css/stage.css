@@ -1,0 +1,195 @@
+:root {
+  --count:'3';
+  --gone: block;
+  --gameWidth: 0.2;
+  --baseWidth: calc(90vh - 240px);
+}
+html, body {
+  margin: 0;
+}
+body {
+  background: #FFE3BF;
+  font-family: 'Montserrat', sans-serif;
+  text-align: center;
+}
+#main {
+  text-align: center;
+  margin: 0px;
+  height: 100vh;
+  top: 0;
+  bottom: 0;
+  z-index: 10;
+}
+#main #level-block {
+  font-size: 32px;
+  display: block;
+  height: 80px;
+  padding: 7vh 0 3vh 0;
+}
+#main #level-block #dim {
+  color:#fff;
+  background: rgba(0, 0, 0, 0.5);
+  font-size: 14px;
+  padding: 3px 15px;
+  border-radius: 30px;
+}
+#main #game-block {
+  display: flex;
+  width: var(--baseWidth);
+  height: var(--baseWidth);
+  max-width: 90vw;
+  max-height: 90vw;
+  margin: auto;
+  z-index: 10;
+}
+#main #game-block #game {
+  justify-content: center;
+  width: calc(var(--baseWidth) * var(--gameWidth));
+  height: calc(var(--baseWidth) * var(--gameWidth));
+  max-width: calc(100vw * var(--gameWidth));
+  max-height: calc(100vw * var(--gameWidth));
+  margin: auto;
+  z-index: 10;
+}
+#main #result {
+  margin-top: 20px;
+  height: 120px;
+}
+#main #result #stat-box {
+  margin: 0 5vw;
+  display: flex;
+}
+#main #result #stat-box #stat {
+  font-size: 20px;
+  text-transform: uppercase;
+  color:#fff;
+  font-family: 'Montserrat', sans-serif;
+  background: rgba(0, 0, 0, 0.5);
+  padding: 10px;
+  width: calc(45vw - 7.5px);
+  border-radius: 5px;
+  z-index: 10;
+}
+#main #result #stat-box #stat:nth-child(1) {
+  margin-right: 15px;
+}
+#main #result #stat-box #stat t {
+  font-weight: 900;
+}
+#dimension {
+  color:#fff;
+  background: rgba(0, 0, 0, 0.5);
+  font-size: 14px;
+  padding: 3px 15px;
+  border-radius: 30px;
+}
+.block {
+  float: left;
+  width: calc((100% / (var(--gameWidth) * 10)) - 0.8vw);
+  height: calc((100% / (var(--gameWidth) * 10)) - 0.8vw);
+  position: relative;
+  z-index: 10;
+  margin: 0.4vw;
+  border-radius: 16%;
+}
+.block:nth-child(1):before {
+  content: var(--count);
+  display: var(--gone);
+  font-family: 'Montserrat', sans-serif;
+  font-size: 5vmin;
+  line-height: 10vmin;
+  width: calc((100% / (var(--gameWidth) * 10)) - 5px);
+  height: calc((100% / (var(--gameWidth) * 10)) - 5px);
+  text-align: center;
+  font-weight: 900;
+  position: absolute;
+  left: 0;
+  top: 0;
+  transform-origin:center center;
+  border-radius: 50%;
+  animation: count 3s ease-out forwards;
+  user-select: none;
+}
+@keyframes count {
+  0% { content:'3'; }
+  40% { content:'2'; }
+  70% { content:'1'; }
+  99% { content:'1'; visibility:hidden; }
+  100% { content:'0'; visibility:hidden; }
+}
+
+.clicked {
+  transform: scale(.85);
+  visibility: visible !important;
+}
+.match:after {
+  content:'\2713';
+  font-family: 'Montserrat', sans-serif;
+  font-size: 5vmin;
+  line-height: 10vmin;
+  width: 10vmin;
+  height: 10vmin;
+  text-align: center;
+  font-weight: 900;
+  position: absolute;
+  left: 0;
+  top: 0;
+  transform-origin: center center;
+  transform: scale(.3);
+  background: rgba(255,255,255,.5);
+  border-radius: 50%;
+  animation: match .5s ease-in forwards;
+  visibility: visible !important;
+}
+@keyframes match {
+  0% { transform:scale(.1); }
+  50% { transform:scale(.6); }
+  100% { transform:scale(.5); }
+}
+#clicks, #time {
+  font-family: 'Montserrat', sans-serif;
+  font-style: bold;
+  margin: 0 auto;
+  line-height: 100%;
+}
+#records {
+  margin: 10px auto;
+  width: fit-contenta;
+}
+#records #stat-box {
+  padding: 5px;
+  margin: 3px 0 0 0;
+  border-radius: 5px;
+  font-size: 10px !important;
+  text-align: left;
+  width: 20vw;
+}
+#records #lvl {
+  padding: 5px;
+  margin: 3px 0 0 0;
+  border-radius: 5px;
+  font-size: 10px !important;
+  text-align: left;
+}
+#records #time, #records #clicks {  
+  font-size: 10px !important;
+}
+.rec {
+  position: relative;
+  display: none;
+}
+.rec .lvl {
+
+}
+.recOn {
+  display: inline-block;
+}
+#background {
+  position: fixed;
+  opacity: 0.3;
+  width: 100vw;
+  height: auto;
+  bottom: 0;
+  left: 0;
+  z-index: 1;
+}

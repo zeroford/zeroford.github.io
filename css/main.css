@@ -1,0 +1,50 @@
+body {
+  background: #FFE3BF;
+  font-family: 'Margarine', sans-serif;
+  text-align: center;
+  margin: 0;
+}
+.main-menu {
+  text-align: center;
+  margin: 20px;
+  height: auto;
+  top: 0;
+  bottom: 0;
+  z-index: 100;
+}
+.logo {
+  width: 80vw;
+  max-width: 250px;
+  height: auto;
+  max-height: 110px;
+  margin: 5vh 0;
+}
+p {
+  margin-top: 10px;
+  font-size: 42px;
+  color: #D49542;
+}
+#play-button {
+  width: 50vw;
+  max-width: 180px;
+  height: 50vh;
+  max-height: 180px;
+  margin: auto;
+  color: #5B381C;
+  cursor: pointer;
+}
+#play-button:hover {
+  opacity: 0.75;
+}
+.play-svg {
+  filter: invert(22%) sepia(19%) saturate(1679%) hue-rotate(344deg) brightness(93%) contrast(90%);
+}
+.background {
+  position: fixed;
+  opacity: 0.3;
+  width: 100%;
+  height: auto;
+  bottom: 0;
+  left: 0;
+  z-index: 1;
+}
