@@ -17,7 +17,6 @@ function startOver() {
   var change = s/bc
   var build = setInterval(blocks,10) 
   var clicks = 0
-  document.querySelector('#game').addEventListener('click', timeThis)
   
   function blocks() {
     var div = document.createElement('span')
@@ -31,6 +30,8 @@ function startOver() {
     if(document.querySelectorAll('.block').length == bc) {
       clearInterval(build,10)    
       setTimeout(function(){
+        document.querySelector('#game').addEventListener('click', timeThis)
+        
         var b = document.querySelectorAll('.block') 
         for(var i=0;i<b.length;i++){
           var rb = b[Math.floor(Math.random()*b.length)] //Math.floor(Math.random()*b.length)
@@ -72,18 +73,18 @@ function startOver() {
                     document.querySelector('#level').innerHTML = 1
                     document.querySelector('#dim').innerHTML = "2x2"
                     document.querySelector('#clicks').innerHTML = 0
-                    document.querySelector('#time').innerHTML = 0 
+                    document.querySelector('#time').innerHTML = 0
                     startOver()    
                   } else {
                     
                   }                 
-                },1500)               
+                },2000)               
               } 
             }              
           }    
-        })  
+        })
         }        
-      },1000)         
+      },3000)         
     }  
   } 
 } 
@@ -94,7 +95,7 @@ function timeThis() {
   console.log(bc)
   function timer() {      
     var elapsedTime = Date.now() - startTime;
-    document.getElementById("time").innerHTML = (elapsedTime / 1000).toFixed(2);
+    document.getElementById("time").innerHTML = (elapsedTime / 1000).toFixed(1);
 
     if(document.querySelector('.match')) {
       if(document.querySelectorAll('.match').length == bc) {
