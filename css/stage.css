@@ -89,7 +89,6 @@ body {
   margin: calc(min(var(--baseWidth), 90vw) * 0.005);
   border-radius: 16%;
 }
-
 .block:nth-child(1):before {
   color: #000;
   background: rgba(255, 255, 255, 0.6);
@@ -190,7 +189,7 @@ body {
   position: relative;
   display: none;
 }
-.recOn {
+.show {
   display: inline-block;
   margin: 5px;
 }
