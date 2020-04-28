@@ -9,16 +9,16 @@ function startOver() {
     document.querySelector('#level').innerHTML = round - 1
     document.querySelector('#dim').innerHTML = `${round}x${round}`
     clicks = 0
-  }    
+  }
   document.documentElement.style.setProperty('--gameWidth', (round*0.1))
   
   if (round != 2) {
-    color = color + 45  
-  }  
+    color = color + 45
+  }
 
   var max = 100
   var change = max / Math.pow(round,2)
-  var build = setInterval(blocks) 
+  var build = setInterval(blocks)
   
   function blocks() {
     var div = document.createElement('span')
@@ -34,17 +34,17 @@ function startOver() {
         document.querySelector('#game').addEventListener('click', timeThis)
         blockItem = document.querySelectorAll('.block') 
         for(var i = 0; i < blockItem.length; i++){
-          var randomNo = i //Math.floor(Math.random() * blockItem.length)
+          var randomNo = Math.floor(Math.random() * blockItem.length)
           var randomBlock = blockItem[randomNo]
           var temp = blockItem[i].style.background
-          blockItem[i].style.background = randomBlock.style.background 
+          blockItem[i].style.background = randomBlock.style.background
           randomBlock.style.background = temp
           blockItem[i].addEventListener('click', detectClick)
-        }        
-      },3000)         
-    }  
-  } 
-} 
+        }
+      },3000)
+    }
+  }
+}
 
 function detectClick() {
   if(!document.querySelector('.clicked')) {
@@ -52,10 +52,10 @@ function detectClick() {
 
     } else {
       this.classList.add('clicked')
-    }                    
-  } else { 
+    }
+  } else {
     if(this.classList.contains('match')) {
-      
+
     } else {
       clicks++
       document.querySelector('#clicks').innerHTML = clicks
@@ -67,7 +67,7 @@ function detectClick() {
       blockItem.forEach(block => {
         if(block.getAttribute('data-color') == block.style.background) {
           block.classList.add('match')
-        }  
+        }
       })
 
       if(document.querySelectorAll('.match').length == Math.pow(round, 2)) {
@@ -79,26 +79,26 @@ function detectClick() {
             document.querySelector('#dim').innerHTML = "2x2"
             document.querySelector('#clicks').innerHTML = 0
             document.querySelector('#time').innerHTML = 0
-            startOver()    
-          }                
+            startOver()
+          }
         },2000) 
       } 
-    }              
-  }    
+    }
+  }
 }
 
 function timeThis() {
-  var startTime = Date.now();
-  function timer() {      
-    var elapsedTime = Date.now() - startTime;
+  var startTime = Date.now()
+  function timer() {
+    var elapsedTime = Date.now() - startTime
     document.getElementById("time").innerHTML = (elapsedTime / 1000).toFixed(1)
 
-    if(document.querySelector('.match') 
+    if(document.querySelector('.match')
         && document.querySelectorAll('.match').length == Math.pow(round,2)) {
       clearInterval(timery)
     }
   }
-  var timery = setInterval(timer)  
+  var timery = setInterval(timer)
   document.querySelector('#game').removeEventListener('click', timeThis)
 }
 
