@@ -81,8 +81,8 @@ function detectClick() {
             document.querySelector('#time').innerHTML = 0
             startOver()
           }
-        },2000) 
-      } 
+        },2000)
+      }
     }
   }
 }
