@@ -124,7 +124,7 @@ body {
 .match:after {
   content:'\2713';
   font-family: 'Montserrat', sans-serif;
-  font-size: 5vmin;
+  font-size: min(5vw, 5vh);
   line-height: 100%;
   width: 100%;
   height: 100%;
