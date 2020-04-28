@@ -1,11 +1,10 @@
 var round = 1
 var color = Math.floor(Math.random()*360)
 var clicks = 0
-var color = Math.floor(Math.random()*360)
 var blockItem
 
 function startOver() {
-  if (round < 9) {
+  if (round < 7) {
     round = round + 1
     document.querySelector('#level').innerHTML = round - 1
     document.querySelector('#dim').innerHTML = `${round}x${round}`
@@ -35,7 +34,7 @@ function startOver() {
         document.querySelector('#game').addEventListener('click', timeThis)
         blockItem = document.querySelectorAll('.block') 
         for(var i = 0; i < blockItem.length; i++){
-          var randomNo = Math.floor(Math.random() * blockItem.length)
+          var randomNo = i //Math.floor(Math.random() * blockItem.length)
           var randomBlock = blockItem[randomNo]
           var temp = blockItem[i].style.background
           blockItem[i].style.background = randomBlock.style.background 
@@ -74,7 +73,7 @@ function detectClick() {
       if(document.querySelectorAll('.match').length == Math.pow(round, 2)) {
         records()
         setTimeout(function(){
-          if(round != 9){
+          if(round != 7){
             document.querySelector('#game').innerHTML = ""
             document.querySelector('#level').innerHTML = 1
             document.querySelector('#dim').innerHTML = "2x2"
