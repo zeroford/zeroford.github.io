@@ -4,15 +4,39 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>My color pencils box</title>
-  <link rel="stylesheet" href="css/main.css">
+  <title>About color</title>
+  <link rel="stylesheet" href="css/about.css">
   <link href="https://fonts.googleapis.com/css?family=Margarine&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
 </head>
 
 <body>
-  <div class="main-menu">
-    About
+  <div class="main">
+    <h1>About color theory</h1>
+    <h2>Hue</h2>
+    <img id="col" src="img/col-hue.jpg">
+    <p>
+      ค่าสี ซึ่งเป็นสมบัติเฉพาะตัวของสีนั้นๆ เป็นสีพื้นที่มี saturation และ brightness ในระดับปกติ จะไม่มีการเติมสีอื่นเข้าไปผสม อาทิเช่น สีแดง สีน้ำเงิน หรือสีเขียว เเต่ในส่วนของสีอย่าง ขาว เทา และดำ จัดเป็น Achromatic colour ซึ่งไม่นับว่าเป็น Hue
+    </p>
+    <h2>Saturation</h2>
+    <img id="col" src="img/col-sat.jpg">
+    <p>
+      Saturation หรือ Chroma คือค่าความอิ่มตัวของสี และระดับของ saturation เป็นการไล่ระดับจากสีที่มีความอ่อน-เข้มเข้าหาหรือออกจากสีเทา โดยสีที่มีความอิ่มตัวน้อยที่สุดคือสีเทา จึงมีค่า saturation เท่ากับศูนย์ ดังนั้นการเติมสีเทาให้เเก่สีต่างๆ นั้นทำให้สีมีความสดใสลดลง และลดความอิ่มตัวลง ดังนั้น ค่า saturation ยิ่งมีค่าน้อยๆ ยิ่งมีความหม่นมากขึ้น เนื่องจากมีการเจือสีเทาเข้าไปผสมมากขึ้นนั่นเอง
+    </p>
+    <h2>Brightness</h2>
+    <img id="col" src="img/col-bri.jpg">
+    <p>
+      Brightness หรือ value คือค่าที่แสดงความสว่างหรือทึบของสี การปรับค่า brightness เปรียบเป็นการผสมสีขาวหรือสีดำเข้าไปเพิ่มหรือลดความสว่างให้กับสี โดยที่สีขาวคือสีที่มี brightness สูงที่สุดและสีดำก็เป็นสีที่มีค่า brightness ต่ำที่สุด ส่วนสีอื่นๆ จะมีความสว่างและทึบ หรือสีขาวและดำผสมกันตามอัตราส่วนต่างๆ เช่น สีชมพู มีสีขาวปนอยู่มากกว่าสีแดง (ทำให้สีชมพูมีค่า brightness สูงกว่าสีแดง) และสีแดงมีค่า brightness ที่สูงกว่าสีน้ำตาล
+    </p>
   </div>
+
+  <div id="back-button">
+    <a href="index.html">
+      <img id="arrow-svg" srcset="img/arrow-left.svg">
+      back
+    </a>
+  </div>
+  <img id="background" src="img/pen_v2.png">
 </body>
 
 

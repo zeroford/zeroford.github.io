@@ -110,7 +110,7 @@ body {
 }
 @keyframes count {
   0% { content: '3'; }
-  50% { cจ๔ontent: '2'; }
+  50% { content: '2'; }
   70% { content: '1'; }
   90% { content: '1'; opacity: 1; }
   99% { content: '1'; opacity: 0; }
@@ -124,8 +124,7 @@ body {
 .match:after {
   content:'\2713';
   font-family: 'Montserrat', sans-serif;
-  font-size: inherit;
-  line-height: 100%;
+  font-size: calc(var(--baseWidth)/10);
   width: 100%;
   height: 100%;
   text-align: center;
@@ -192,6 +191,33 @@ body {
 .show {
   display: inline-block;
   margin: 5px;
+}
+a {
+  color: #FFFFFF;
+  text-decoration: none;
+  font-family: 'Montserrat', sans-serif;
+}
+#back-button {
+  position: fixed;
+  width: 50px;
+  height: 50px;
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.5);
+  color: #fff;
+  font-size: 12px;
+  border-radius: 30px;
+  cursor: pointer;
+  margin: 20px;
+  z-index: 100;
+}
+#back-button #arrow-svg {
+  filter: invert(100%);
+  margin-top: 6px;
+  margin-bottom: -6px;
+}
+#back-button:hover, #back-button:hover {
+  opacity: 0.75;
 }
 #background {
   position: fixed;
