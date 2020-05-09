@@ -52,7 +52,7 @@ body {
   margin-bottom: 5px;
 }
 #stat-box {
-  margin: 0 5vw;
+  margin: 0 5vw 15px 5vw;
   display: flex;
   background: rgba(0, 0, 0, 0.6);
   border-radius: 5px;
@@ -62,7 +62,7 @@ body {
   text-transform: uppercase;
   color:#fff;
   font-family: 'Montserrat', sans-serif;
-  padding: 10px;
+  padding: 8px;
   width: 45vw;
 }
 #time, #clicks {  

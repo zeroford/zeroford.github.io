@@ -11,6 +11,13 @@ body {
   top: 0;
   bottom: 0;
 }
+#logo {
+  width: 70vw;
+  max-width: 250px;
+  height: auto;
+  max-height: 200px;
+  margin: 5vh 0;
+}
 ol, p {
   font-family: 'Montserrat', sans-serif;
   text-align: justify;

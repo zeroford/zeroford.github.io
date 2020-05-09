@@ -24,9 +24,9 @@ a {
 }
 #logo {
   width: 70vw;
-  max-width: 200px;
+  max-width: 250px;
   height: auto;
-  max-height: 160px;
+  max-height: 200px;
   margin: 5vh 0;
 }
 #play-button {
@@ -39,11 +39,12 @@ a {
 #button-component {
   background: #654018;
   color: #fff;
-  font-size: 5vw;
+  font-size: 30px;
   padding: 10px 15px;
   border-radius: 100px;
-  width: auto;
-  margin: 0 25vw 10px 25vw;
+  width: 60vw;
+  max-height: 100px;
+  margin: 0 auto 10px auto;
   cursor: pointer;
 }
 #play-button:hover, #about-button:hover {
