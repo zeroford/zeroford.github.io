@@ -1,6 +1,6 @@
 body {
   background: #FFE3BF;
-  font-family: 'Margarine', sans-serif;
+  font-family: 'Mali', sans-serif;
   text-align: center;
   margin: 0;
 }
@@ -15,7 +15,8 @@ p {
   margin-top: 10px;
   margin-left: -50px;
   margin-right: -50px;
-  font-size: 36px;
+  font-size: 40px;
+  font-weight: 600;
   color: #D49542;
 }
 a {
@@ -39,7 +40,7 @@ a {
 #button-component {
   background: #654018;
   color: #fff;
-  font-size: 30px;
+  font-size: 26px;
   padding: 10px 15px;
   border-radius: 100px;
   width: 60vw;

@@ -1,6 +1,6 @@
 body {
   background: #FFE3BF;
-  font-family: 'Margarine', sans-serif;
+  font-family: 'Mali', sans-serif;
   text-align: center;
   margin: 0;
 }
@@ -19,9 +19,8 @@ body {
   margin: 5vh 0;
 }
 ol, p {
-  font-family: 'Montserrat', sans-serif;
   text-align: justify;
-  font-size: 18px;
+  font-size: 16px;
 }
 ol {
   padding-left: 20px;
@@ -29,13 +28,18 @@ ol {
 a {
   color: #FFFFFF;
   text-decoration: none;
-  font-family: 'Montserrat', sans-serif;
+}
+#col-block {
+  max-width: 600px;
+  margin: auto;
 }
 #col {
   width: 100%;
+  max-width: 400px;
   height: auto;
 }
 #back-button {
+  font-family: 'Montserrat', sans-serif;
   position: fixed;
   width: 50px;
   height: 50px;
