@@ -15,7 +15,7 @@ p {
   margin-top: 10px;
   margin-left: -50px;
   margin-right: -50px;
-  font-size: 40px;
+  font-size: min(40px, 5vh);
   font-weight: 600;
   color: #D49542;
 }
@@ -24,15 +24,15 @@ a {
   text-decoration: none;
 }
 #logo {
-  width: 70vw;
+  width: 50vw;
   max-width: 250px;
   height: auto;
   max-height: 200px;
-  margin: 5vh 0;
+  margin: 2.5vh 0;
 }
 #play-button {
-  width: 50vw;
-  max-width: 140px;
+  width: 40vw;
+  max-width: 125px;
   margin: auto;
   color: #5B381C;
   cursor: pointer;
@@ -40,7 +40,7 @@ a {
 #button-component {
   background: #654018;
   color: #fff;
-  font-size: 26px;
+  font-size: min(26px, 3vh);
   padding: 10px 15px;
   border-radius: 100px;
   width: 60vw;
