@@ -3,14 +3,17 @@
   --gameWidth: 0.2;
   --baseWidth: calc(90vh - 270px);
 }
+
 html, body {
   margin: 0;
 }
+
 body {
   background: #FFE3BF;
   font-family: 'Montserrat', sans-serif;
   text-align: center;
 }
+
 #main {
   text-align: center;
   margin: 0px;
@@ -18,12 +21,14 @@ body {
   top: 0;
   bottom: 0;
 }
+
 #level-block {
   font-size: 32px;
   display: block;
   height: 80px;
   padding: 7vh 0 3vh 0;
 }
+
 #level-block #dim {
   color:#fff;
   background: rgba(0, 0, 0, 0.5);
@@ -31,6 +36,7 @@ body {
   padding: 3px 15px;
   border-radius: 30px;
 }
+
 #game-block {
   display: flex;
   width: var(--baseWidth);
@@ -39,6 +45,7 @@ body {
   max-height: 90vw;
   margin: auto;
 }
+
 #game-block #game {
   justify-content: center;
   width: calc(var(--baseWidth) * var(--gameWidth) * (9/7));
@@ -47,16 +54,19 @@ body {
   max-height: calc(100vw * var(--gameWidth) * (9/7));
   margin: auto;
 }
+
 #result {
   margin-top: 15px;
   margin-bottom: 5px;
 }
+
 #stat-box {
   margin: 0 5vw 15px 5vw;
   display: flex;
   background: rgba(0, 0, 0, 0.6);
   border-radius: 5px;
 }
+
 #stat-box #stat {
   font-size: 16px;
   text-transform: uppercase;
@@ -65,15 +75,19 @@ body {
   padding: 8px;
   width: 45vw;
 }
+
 #time, #clicks {  
   font-size: 28px;
 }
+
 #stat-box #stat:nth-child(1) {
   margin-right: 15px;
 }
+
 #stat-box #stat t {
   font-weight: 900;
 }
+
 #dimension {
   color:#fff;
   background: rgba(0, 0, 0, 0.6);
@@ -81,6 +95,7 @@ body {
   padding: 3px 15px;
   border-radius: 30px;
 }
+
 .block {
   float: left;
   width: calc((10% / var(--gameWidth)) - (min(var(--baseWidth), 90vw) * 0.01));
@@ -89,6 +104,7 @@ body {
   margin: calc(min(var(--baseWidth), 90vw) * 0.005);
   border-radius: 16%;
 }
+
 .block:nth-child(1):before {
   color: #000;
   background: rgba(255, 255, 255, 0.6);
@@ -108,6 +124,7 @@ body {
   transition: 0.3s;
   z-index: 10;
 }
+
 @keyframes count {
   0% { content: '3'; }
   50% { content: '2'; }
@@ -121,6 +138,7 @@ body {
   transform: scale(.85);
   visibility: visible !important;
 }
+
 .match:after {
   content:'\2713';
   font-family: 'Montserrat', sans-serif;
@@ -139,22 +157,26 @@ body {
   animation: match .3s ease-out forwards;
   visibility: visible !important;
 }
+
 @keyframes match {
   0% { transform:scale(.0); }
   50% { transform:scale(.6); }
   100% { transform:scale(.5); }
 }
+
 #clicks, #time {
   font-family: 'Montserrat', sans-serif;
   font-style: bold;
   margin: 0 auto;
   line-height: 100%;
 }
+
 #records {
   margin: 10px auto;
   width: fit-content;
   color:#fff;
 }
+
 #records .lvl {
   padding: 3px 15px;
   margin: 0 auto;
@@ -164,6 +186,7 @@ body {
   width: fit-content;
   text-align: center;
 }
+
 #records #stat-box {
   padding: 0px;
   margin: 5px 0 0 0 !important;
@@ -173,30 +196,37 @@ body {
   width: calc(30vw - 10px);
   min-width: 150px;
 }
+
 #records #stat-box #stat {
   padding: 6px !important;
   font-size: 12px !important;
   width: calc(50% - 5px);
 }
+
 #records #stat-box #stat:nth-child(1) {
   margin-right: 10px !important;
 }
+
 #records #time, #records #clicks {  
   font-size: 18px !important;
 }
+
 .rec {
   position: relative;
   display: none;
 }
+
 .show {
   display: inline-block;
   margin: 5px;
 }
+
 a {
   color: #FFFFFF;
   text-decoration: none;
   font-family: 'Montserrat', sans-serif;
 }
+
 #back-button {
   position: fixed;
   width: 50px;
@@ -211,14 +241,17 @@ a {
   margin: 20px;
   z-index: 100;
 }
+
 #back-button #arrow-svg {
   filter: invert(100%);
   margin-top: 6px;
   margin-bottom: -6px;
 }
+
 #back-button:hover, #back-button:hover {
   opacity: 0.75;
 }
+
 #background {
   position: fixed;
   opacity: 0.3;

@@ -4,6 +4,7 @@ body {
   text-align: center;
   margin: 0;
 }
+
 .main {
   text-align: center;
   margin: 40px;
@@ -11,6 +12,7 @@ body {
   top: 0;
   bottom: 0;
 }
+
 #logo {
   width: 70vw;
   max-width: 250px;
@@ -18,26 +20,32 @@ body {
   max-height: 200px;
   margin: 5vh 0;
 }
+
 ol, p {
   text-align: justify;
   font-size: 16px;
 }
+
 ol {
   padding-left: 20px;
 }
+
 a {
   color: #FFFFFF;
   text-decoration: none;
 }
+
 #col-block {
   max-width: 600px;
   margin: auto;
 }
+
 #col {
   width: 100%;
   max-width: 400px;
   height: auto;
 }
+
 #back-button {
   font-family: 'Montserrat', sans-serif;
   position: fixed;
@@ -53,14 +61,17 @@ a {
   margin: 20px;
   z-index: 100;
 }
+
 #back-button #arrow-svg {
   filter: invert(100%);
   margin-top: 6px;
   margin-bottom: -6px;
 }
+
 #back-button:hover, #back-button:hover {
   opacity: 0.75;
 }
+
 #background {
   position: fixed;
   opacity: 0.3;

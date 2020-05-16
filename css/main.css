@@ -4,6 +4,7 @@ body {
   text-align: center;
   margin: 0;
 }
+
 .main-menu {
   text-align: center;
   margin: 20px;
@@ -11,6 +12,7 @@ body {
   top: 0;
   bottom: 0;
 }
+
 p {
   margin-top: 10px;
   margin-left: -50px;
@@ -19,10 +21,12 @@ p {
   font-weight: 600;
   color: #D49542;
 }
+
 a {
   color: #FFFFFF;
   text-decoration: none;
 }
+
 #logo {
   width: 50vw;
   max-width: 250px;
@@ -30,13 +34,15 @@ a {
   max-height: 200px;
   margin: 2.5vh 0;
 }
+
 #play-button {
   width: 40vw;
-  max-width: 125px;
+  max-width: 200px;
   margin: auto;
   color: #5B381C;
   cursor: pointer;
 }
+
 #button-component {
   background: #654018;
   color: #fff;
@@ -48,12 +54,15 @@ a {
   margin: 0 auto 10px auto;
   cursor: pointer;
 }
-#play-button:hover, #about-button:hover {
+
+#play-button:hover, #button-component:hover {
   opacity: 0.75;
 }
+
 #play-svg {
   filter: invert(22%) sepia(19%) saturate(1679%) hue-rotate(344deg) brightness(93%) contrast(90%);
 }
+
 #background {
   position: fixed;
   opacity: 0.3;
@@ -63,3 +72,7 @@ a {
   left: 0;
   z-index: -1;
 }
+
+/* Button effect = https://www.youtube.com/watch?v=nHyOMw_utMs 
+    Ripple effect
+*/

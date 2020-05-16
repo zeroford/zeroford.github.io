@@ -8,26 +8,32 @@
   <link rel="stylesheet" href="css/about.css">
   <link href="https://fonts.googleapis.com/css?family=Mali&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
+  <link rel="shortcut icon" type="image/svg" href="img/favicon.svg">
 </head>
 
 <body>
   <div class="main">
-    <h1>About color theory</h1>
+    <h1><u>About color theory</u></h1>
+
     <h2>Hue</h2>
     <div id="col-block">
       <img id="col" src="img/col-hue.jpg">
-      <p style="text-indent: 2.5em;">
+      <p style="text-indent: 2.5em;"> <!-- text-indent = การย่อหน้าข้อความ -->
         ค่าสี ซึ่งเป็นสมบัติเฉพาะตัวของสีนั้นๆ เป็นสีพื้นที่มี saturation และ brightness ในระดับปกติ จะไม่มีการเติมสีอื่นเข้าไปผสม อาทิเช่น สีแดง สีน้ำเงิน หรือสีเขียว เเต่ในส่วนของสีอย่าง ขาว เทา และดำ จัดเป็น Achromatic colour ซึ่งไม่นับว่าเป็น Hue
       </p>
     </div>
+
     <div id="col-block">
+
       <h2>Saturation</h2>
       <img id="col" src="img/col-sat.jpg">
       <p style="text-indent: 2.5em;">
         Saturation หรือ Chroma คือค่าความอิ่มตัวของสี และระดับของ saturation เป็นการไล่ระดับจากสีที่มีความอ่อน-เข้มเข้าหาหรือออกจากสีเทา โดยสีที่มีความอิ่มตัวน้อยที่สุดคือสีเทา จึงมีค่า saturation เท่ากับศูนย์ ดังนั้นการเติมสีเทาให้เเก่สีต่างๆ นั้นทำให้สีมีความสดใสลดลง และลดความอิ่มตัวลง ดังนั้น ค่า saturation ยิ่งมีค่าน้อยๆ ยิ่งมีความหม่นมากขึ้น เนื่องจากมีการเจือสีเทาเข้าไปผสมมากขึ้นนั่นเอง
       </p>
     </div>
+
     <div id="col-block">
+
       <h2>Brightness</h2>
       <img id="col" src="img/col-bri.jpg">
       <p style="text-indent: 2.5em;">
@@ -35,16 +41,39 @@
       </p>
     </div>
   </div>
+
   <div id="back-button">
     <a href="index.html">
       <img id="arrow-svg" srcset="img/arrow-left.svg">
-      back
+        Back
     </a>
   </div>
+
   <img id="background" src="img/pen_v2.png">
+
 </body>
 
 
 <script src="js/script.js"></script>
 
 </html>
+
+<!-- 1. letter-spacing : กำหนดระยะห่างระหว่างตัวอักษร
+2. word-spacing : กำหนดระยะห่างระหว่างคำ
+3. text-indent : เป็นการย่อหน้าหรือเว้นว่างหน้าข้อความ
+4. text-align : จัดให้ชิดซ้าย ขวา หรือวางตรงกลางข้อความ
+5. text-decoration : ตกแต่งให้มีขีดเส้นใต้ เหนือ หรือตรงกลางข้อความ
+6. text-transform : Capitalized Text แปลงให้เป็นตัวพิมพ์เล็ก หรือตัวพิมพ์ใหญ่
+7. white-space : ควบคุมลักษณะการพิมพ์ตัวอักษร
+เวลาใช้งานกับไฟล์ .CSS 
+รูปแบบที่เรียกเป็น class="  " จึงเติม . ก่อนชื่อ class เช่น .text{  }
+รูปแบบที่เรียกเป็น id="  " จึงเติม # ก่อนชื่อ id  เช่น #text{  }
+
+ตัวหนา = ใช้กำหนดข้อความที่อยู่ภายในคำสั่ง ให้แสดงผลด้วยตัวอักษรแบบตัวหนา (bold) มีจุดประสงค์เพื่อเน้นข้อความในประโยคนั้น ใช้ Tag <b>...</b>
+
+       ตัวเอียง = ใช้กำหนดข้อความที่อยู่ภายในคำสั่งให้แสดงผลด้วยตัวอักษรแบบเอน (Italic) มีจุดประสงค์เพื่อเน้นข้อความในประโยคนั้น ใช้ Tag <i>...</i>
+
+       ขีดเส้นใต้ = ใช้กำหนดข้อความที่อยู่ภายในคำสั่ง ให้แสดงผลด้วยตัวอักษรขีดเส้นใต้ (underline) มีจุดประสงค์เพื่อเน้นข้อความในประโยคนั้น ใช้ Tag <u>...</u>
+
+
+-->

@@ -4,25 +4,36 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>My color pencils box</title>
+  <title>My color pencils </title>
   <link rel="stylesheet" href="css/stage.css">
   <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
+  <link rel="shortcut icon" type="image/svg" href="img/favicon.svg">
   <script type='text/javascript' src='https://platform-api.sharethis.com/js/sharethis.js#property=5eb717bbc155b9001af9bfb2&product=inline-share-buttons&cms=sop' async='async'></script>
 </head>
 
 <body>
   <div id="main">
-    <div id="level-block">LEVEL <t id='level'>1</t><br><t id='dim'>2x2</t></div>
+
+    <div id="level-block">LEVEL <t id='level'>1</t><br>
+                                <t id='dim'>2x2</t></div>
     <div id="game-block">
       <div id="counter"></div>
       <div id="game"></div>
     </div>
+
     <div id="result">
       <div id="stat-box">
         <span id="stat">Moves <br><t id='clicks'>0</t></span>
         <span id="stat">Time <br><t id='time'>0</t></span>
       </div>
+
+  <!-- Plug in 
+      1.Facebook
+      2.Twitter
+      3.Line
+      4.Mail-           -->
       <div class="sharethis-inline-share-buttons"></div>
+
       <div id="records">
         <div id="rec2" class="rec"><div class="lvl">2x2</div></div>
         <div id="rec3" class="rec"><div class="lvl">3x3</div></div>
@@ -31,14 +42,22 @@
         <div id="rec6" class="rec"><div class="lvl">6x6</div></div>
         <div id="rec7" class="rec"><div class="lvl">7x7</div></div>
       </div>
+
     </div>
   </div>
+
+
+
+
+  <!-- ปุ่มย้อนกลับ -->
+
   <div id="back-button">
     <a href="index.html">
       <img id="arrow-svg" srcset="img/arrow-left.svg">
-      back
+        Back
     </a>
   </div>
+
   <img id="background" src="img/pen_v2.png">
 </body>
 
