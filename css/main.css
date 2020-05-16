@@ -60,7 +60,8 @@ a {
 }
 
 #play-svg {
-  filter: invert(22%) sepia(19%) saturate(1679%) hue-rotate(344deg) brightness(93%) contrast(90%);
+  -webkit-filter: invert(22%) sepia(19%) saturate(1679%) hue-rotate(344deg) brightness(93%) contrast(90%);
+          filter: invert(22%) sepia(19%) saturate(1679%) hue-rotate(344deg) brightness(93%) contrast(90%);
 }
 
 #background {
