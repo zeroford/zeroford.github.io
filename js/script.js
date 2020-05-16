@@ -3,14 +3,8 @@ var color = Math.floor(Math.random()*360)
 var clicks = 0
 var blockItem
 
-async function startOver() {
-  
-  if (round == 2) {
-    var conf = confirm("Congratulation\nDo you want to play again?")
-    if (conf == true) {
-      location.reload()
-    }
-  } else if (round < 2) { // 7
+function startOver() { 
+  if (round < 7) {
     round = round + 1
     document.querySelector('#level').innerHTML = round - 1
     document.querySelector('#dim').innerHTML = `${round}x${round}`
@@ -87,12 +81,30 @@ function detectClick() {
             document.querySelector('#dim').innerHTML = "2x2"
             document.querySelector('#clicks').innerHTML = 0
             document.querySelector('#time').innerHTML = 0
-            startOver()
+            if (round == 7) {
+              var conf = confirm("Congratulation\nDo you want to play again?")
+              if (conf == true) {
+                location.reload()
+              } else {
+                document.querySelector('#game-block').classList.add('hideout')
+                document.querySelector('#stat-box').classList.add('hideout')
+                document.querySelector('#play-again').classList.add('show')
+                document.querySelector('#dim').innerHTML = "Congratulation!"
+                document.querySelector('#level').innerHTML = "COMPLETE"
+                document.querySelector('#play-again').addEventListener('click', reloadPage)
+              }
+            } else {
+              startOver()
+            }
           }
         },2000)
       }
     }
   }
+}
+
+function reloadPage() { 
+  location.reload()
 }
 
 function timeThis() {
