@@ -3,22 +3,29 @@ var color = Math.floor(Math.random()*360)
 var clicks = 0
 var blockItem
 
-function startOver() {
-  if (round < 7) {
+async function startOver() {
+  
+  if (round == 2) {
+    var conf = confirm("Congratulation\nDo you want to play again?")
+    if (conf == true) {
+      location.reload()
+    }
+  } else if (round < 2) { // 7
     round = round + 1
     document.querySelector('#level').innerHTML = round - 1
     document.querySelector('#dim').innerHTML = `${round}x${round}`
     clicks = 0
-  }
-  document.documentElement.style.setProperty('--gameWidth', (round*0.1))
-  
-  if (round != 2) {
-    color = color + 45
-  }
 
-  var max = 100
-  var change = max / Math.pow(round,2)
-  var build = setInterval(blocks)
+    document.documentElement.style.setProperty('--gameWidth', (round*0.1))
+  
+    if (round != 2) {
+      color = color + 45
+    }
+  
+    var max = 100
+    var change = max / Math.pow(round,2)
+    var build = setInterval(blocks)
+  } 
   
   function blocks() {
     var div = document.createElement('span')
@@ -31,7 +38,8 @@ function startOver() {
     if (document.querySelectorAll('.block').length == Math.pow(round,2)) {
       clearInterval(build)
       setTimeout(function(){
-        document.querySelector('#game').addEventListener('click', timeThis)
+        timeThis()
+        // document.querySelector('#game').addEventListener('click', timeThis)
         blockItem = document.querySelectorAll('.block') 
         for(var i = 0; i < blockItem.length; i++){
           var randomNo = Math.floor(Math.random() * blockItem.length)

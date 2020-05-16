@@ -119,7 +119,7 @@ body {
   font-size: 30px;
   text-align: center;
   position: absolute;
-  animation: count 4s linear forwards;
+  animation: count 3s linear forwards;
   border-radius: calc(((100% / (var(--gameWidth) * 10)) - (min(var(--baseWidth), 90vw) * 0.01)) * 0.16);
   transition: 0.3s;
   z-index: 10;
@@ -128,7 +128,7 @@ body {
 @keyframes count {
   0% { content: '3'; }
   50% { content: '2'; }
-  70% { content: '1'; }
+  80% { content: '1'; }
   90% { content: '1'; opacity: 1; }
   99% { content: '1'; opacity: 0; }
   100% { content: '0'; opacity: 0; visibility:hidden;}
