@@ -305,8 +305,9 @@ a {
   color: #fff;
   font-size: 24px;
   width: var(--baseWidth);
-  margin: 40px auto;
-  padding: 20px;
+  margin: auto;
+  margin-bottom: 15px;
+  padding: 17px;
   border-radius: 40px;
   cursor: pointer;
 }

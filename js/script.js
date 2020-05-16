@@ -75,27 +75,25 @@ function detectClick() {
       if(document.querySelectorAll('.match').length == Math.pow(round, 2)) {
         records()
         setTimeout(function(){
-          if(round != 7){
+          if(round < 7){
             document.querySelector('#game').innerHTML = ""
             document.querySelector('#level').innerHTML = 1
             document.querySelector('#dim').innerHTML = "2x2"
             document.querySelector('#clicks').innerHTML = 0
             document.querySelector('#time').innerHTML = 0
-            if (round == 7) {
-              var conf = confirm("Congratulation\nDo you want to play again?")
+            startOver()
+          } else {
+            var conf = confirm("Congratulation\nDo you want to play again?")
               if (conf == true) {
                 location.reload()
               } else {
-                document.querySelector('#game-block').classList.add('hideout')
+                // document.querySelector('#game-block').classList.add('hideout')
                 document.querySelector('#stat-box').classList.add('hideout')
                 document.querySelector('#play-again').classList.add('show')
                 document.querySelector('#dim').innerHTML = "Congratulation!"
                 document.querySelector('#level').innerHTML = "COMPLETE"
                 document.querySelector('#play-again').addEventListener('click', reloadPage)
               }
-            } else {
-              startOver()
-            }
           }
         },2000)
       }
